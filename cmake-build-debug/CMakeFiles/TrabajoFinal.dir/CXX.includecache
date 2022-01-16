@@ -1098,7 +1098,7 @@ detail/type_vec4.hpp
 detail/func_vector_relational.hpp
 ../../libraries2122/glm/include/glm/detail/func_vector_relational.hpp
 
-F:/uni/IG/Practicas/TrabajoFinal/src/Model.h
+F:/uni/IG/Practicas/PFinal/src/Model.h
 iostream
 -
 vector
@@ -1116,7 +1116,7 @@ assimp/scene.h
 assimp/postprocess.h
 -
 
-F:/uni/IG/Practicas/TrabajoFinal/src/Shaders.h
+F:/uni/IG/Practicas/PFinal/src/Shaders.h
 iostream
 -
 fstream
@@ -1132,7 +1132,7 @@ glm/gtc/matrix_transform.hpp
 sstream
 -
 
-F:/uni/IG/Practicas/TrabajoFinal/src/Texture.h
+F:/uni/IG/Practicas/PFinal/src/Texture.h
 iostream
 -
 GL/glew.h
@@ -1140,7 +1140,7 @@ GL/glew.h
 freeImage.h
 -
 
-F:/uni/IG/Practicas/TrabajoFinal/src/main.cpp
+F:/uni/IG/Practicas/PFinal/src/main.cpp
 iostream
 -
 GL/glew.h
@@ -1148,11 +1148,11 @@ GL/glew.h
 GLFW/glfw3.h
 -
 Shaders.h
-F:/uni/IG/Practicas/TrabajoFinal/src/Shaders.h
+F:/uni/IG/Practicas/PFinal/src/Shaders.h
 Model.h
-F:/uni/IG/Practicas/TrabajoFinal/src/Model.h
+F:/uni/IG/Practicas/PFinal/src/Model.h
 Texture.h
-F:/uni/IG/Practicas/TrabajoFinal/src/Texture.h
+F:/uni/IG/Practicas/PFinal/src/Texture.h
 cmath
 -
 

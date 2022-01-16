@@ -39,8 +39,7 @@ void drawSuelo(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 
 //DIBUJO DE LA NORIA
 
-//Toroide grande
-void drawToroideNoria(glm::mat4 P, glm::mat4 V, glm::mat4 M);
+
 
 
 //Sustento noria (patas sustento principal)
@@ -48,6 +47,8 @@ void drawPataNoria(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 
 void drawSustento(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 
+//Toroide grande
+void drawToroideNoria(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 
 //Interior de la noria
 void drawTriangulo(glm::mat4 P, glm::mat4 V, glm::mat4 M);
@@ -57,9 +58,12 @@ void drawInterior(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 
 //CABINA
 void drawCabina(glm::mat4 P, glm::mat4 V, glm::mat4 M);
+
 void drawCabinasEnToroide(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 
 //Noria final
+void juntarPartesToroide(glm::mat4 P, glm::mat4 V, glm::mat4 M);
+
 void drawNoria(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 
 
@@ -329,16 +333,7 @@ void renderScene() {
 
     // Dibujamos la escena
     drawSuelo(P, V, I);
-    drawToroideNoria(P, V, I);
-    drawCabinasEnToroide(P, V, I);
-    //drawTriangulo(P, V, I);
-    drawInterior(P, V, I);
-
-    drawNoria(P,V,I);
-
-    //drawObjectTex(cabin, mluz, P, V, glm::scale(I, glm::vec3(0.01, 0.01, 0.01)));
-
-
+    drawNoria(P, V, I);
 }
 
 void drawObjectMat(Model model, Material material, glm::mat4 P, glm::mat4 V, glm::mat4 M) { //OBLIGATORIO
@@ -457,18 +452,26 @@ void drawCabina(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
     drawObjectMat(cabin, pbronze, P, V, M * R * S);
 
 }
-void drawCabinasEnToroide(glm::mat4 P, glm::mat4 V, glm::mat4 M){
+
+void drawCabinasEnToroide(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
     glm::mat4 T = glm::translate(I, glm::vec3(0, 3 + 0.2, 0));
 
     for (int i = 0; i < 15; ++i) {
         glm::mat4 R = glm::rotate(I, glm::radians(i * 360.0f / 15), glm::vec3(0, 0, 1));
-        drawCabina(P,V,M * R * T);
+        drawCabina(P, V, M * R * T);
     }
+}
+
+void juntarPartesToroide(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
+    drawToroideNoria(P, V, M);
+    drawCabinasEnToroide(P, V, M);
+    drawInterior(P, V, M);
 }
 
 void drawNoria(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
     //Calculamos con pitágoras la longitud en el eje y de la pata para ponerla encima del plano
     float longpata = 6.0f * cos(25.0f * PI / 180.0f);
     glm::mat4 T = glm::translate(I, glm::vec3(0, longpata, 0));
-    drawSustento(P,V,M * T);
+    drawSustento(P, V, M * T);
+    juntarPartesToroide(P, V, M * T);
 }

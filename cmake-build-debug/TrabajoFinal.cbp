@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug"/>
+				<Option working_dir="F:/uni/IG/Practicas/PFinal/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug"/>
+				<Option working_dir="F:/uni/IG/Practicas/PFinal/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TrabajoFinal">
-				<Option output="F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/binary/TrabajoFinal.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug"/>
+				<Option output="F:/uni/IG/Practicas/PFinal/cmake-build-debug/binary/TrabajoFinal.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="F:/uni/IG/Practicas/PFinal/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="F:/uni/IG/Practicas/TrabajoFinal/src"/>
-					<Add directory="F:/uni/IG/Practicas/TrabajoFinal/../libraries2122/glew/include"/>
-					<Add directory="F:/uni/IG/Practicas/TrabajoFinal/../libraries2122/glfw/include"/>
-					<Add directory="F:/uni/IG/Practicas/TrabajoFinal/../libraries2122/glm/include"/>
-					<Add directory="F:/uni/IG/Practicas/TrabajoFinal/../libraries2122/assimp/include"/>
-					<Add directory="F:/uni/IG/Practicas/TrabajoFinal/../libraries2122/freeimage/include"/>
+					<Add directory="F:/uni/IG/Practicas/PFinal/src"/>
+					<Add directory="F:/uni/IG/Practicas/PFinal/../libraries2122/glew/include"/>
+					<Add directory="F:/uni/IG/Practicas/PFinal/../libraries2122/glfw/include"/>
+					<Add directory="F:/uni/IG/Practicas/PFinal/../libraries2122/glm/include"/>
+					<Add directory="F:/uni/IG/Practicas/PFinal/../libraries2122/assimp/include"/>
+					<Add directory="F:/uni/IG/Practicas/PFinal/../libraries2122/freeimage/include"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
@@ -49,25 +49,25 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 TrabajoFinal"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 TrabajoFinal"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TrabajoFinal/fast">
-				<Option output="F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/binary/TrabajoFinal.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug"/>
+				<Option output="F:/uni/IG/Practicas/PFinal/cmake-build-debug/binary/TrabajoFinal.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="F:/uni/IG/Practicas/PFinal/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="F:/uni/IG/Practicas/TrabajoFinal/src"/>
-					<Add directory="F:/uni/IG/Practicas/TrabajoFinal/../libraries2122/glew/include"/>
-					<Add directory="F:/uni/IG/Practicas/TrabajoFinal/../libraries2122/glfw/include"/>
-					<Add directory="F:/uni/IG/Practicas/TrabajoFinal/../libraries2122/glm/include"/>
-					<Add directory="F:/uni/IG/Practicas/TrabajoFinal/../libraries2122/assimp/include"/>
-					<Add directory="F:/uni/IG/Practicas/TrabajoFinal/../libraries2122/freeimage/include"/>
+					<Add directory="F:/uni/IG/Practicas/PFinal/src"/>
+					<Add directory="F:/uni/IG/Practicas/PFinal/../libraries2122/glew/include"/>
+					<Add directory="F:/uni/IG/Practicas/PFinal/../libraries2122/glfw/include"/>
+					<Add directory="F:/uni/IG/Practicas/PFinal/../libraries2122/glm/include"/>
+					<Add directory="F:/uni/IG/Practicas/PFinal/../libraries2122/assimp/include"/>
+					<Add directory="F:/uni/IG/Practicas/PFinal/../libraries2122/freeimage/include"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
@@ -77,45 +77,45 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 TrabajoFinal/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 TrabajoFinal/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug"/>
+				<Option working_dir="F:/uni/IG/Practicas/PFinal/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;F:/uni/IG/Practicas/PFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="F:/uni/IG/Practicas/TrabajoFinal/src/Model.cpp">
+		<Unit filename="F:/uni/IG/Practicas/PFinal/src/Model.cpp">
 			<Option target="TrabajoFinal"/>
 		</Unit>
-		<Unit filename="F:/uni/IG/Practicas/TrabajoFinal/src/Model.h">
+		<Unit filename="F:/uni/IG/Practicas/PFinal/src/Model.h">
 			<Option target="TrabajoFinal"/>
 		</Unit>
-		<Unit filename="F:/uni/IG/Practicas/TrabajoFinal/src/Shaders.cpp">
+		<Unit filename="F:/uni/IG/Practicas/PFinal/src/Shaders.cpp">
 			<Option target="TrabajoFinal"/>
 		</Unit>
-		<Unit filename="F:/uni/IG/Practicas/TrabajoFinal/src/Shaders.h">
+		<Unit filename="F:/uni/IG/Practicas/PFinal/src/Shaders.h">
 			<Option target="TrabajoFinal"/>
 		</Unit>
-		<Unit filename="F:/uni/IG/Practicas/TrabajoFinal/src/Texture.cpp">
+		<Unit filename="F:/uni/IG/Practicas/PFinal/src/Texture.cpp">
 			<Option target="TrabajoFinal"/>
 		</Unit>
-		<Unit filename="F:/uni/IG/Practicas/TrabajoFinal/src/Texture.h">
+		<Unit filename="F:/uni/IG/Practicas/PFinal/src/Texture.h">
 			<Option target="TrabajoFinal"/>
 		</Unit>
-		<Unit filename="F:/uni/IG/Practicas/TrabajoFinal/src/main.cpp">
+		<Unit filename="F:/uni/IG/Practicas/PFinal/src/main.cpp">
 			<Option target="TrabajoFinal"/>
 		</Unit>
-		<Unit filename="F:/uni/IG/Practicas/TrabajoFinal/CMakeLists.txt">
+		<Unit filename="F:/uni/IG/Practicas/PFinal/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

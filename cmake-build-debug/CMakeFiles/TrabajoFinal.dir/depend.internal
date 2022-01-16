@@ -130,8 +130,8 @@ CMakeFiles/TrabajoFinal.dir/src/Model.cpp.obj
  ../../libraries2122/glm/include/glm/vec3.hpp
  ../../libraries2122/glm/include/glm/vec4.hpp
  ../../libraries2122/glm/include/glm/vector_relational.hpp
- F:/uni/IG/Practicas/TrabajoFinal/src/Model.cpp
- F:/uni/IG/Practicas/TrabajoFinal/src/Model.h
+ F:/uni/IG/Practicas/PFinal/src/Model.cpp
+ F:/uni/IG/Practicas/PFinal/src/Model.h
 CMakeFiles/TrabajoFinal.dir/src/Shaders.cpp.obj
  ../../libraries2122/glew/include/GL/glew.h
  ../../libraries2122/glm/include/glm/common.hpp
@@ -235,13 +235,13 @@ CMakeFiles/TrabajoFinal.dir/src/Shaders.cpp.obj
  ../../libraries2122/glm/include/glm/vec3.hpp
  ../../libraries2122/glm/include/glm/vec4.hpp
  ../../libraries2122/glm/include/glm/vector_relational.hpp
- F:/uni/IG/Practicas/TrabajoFinal/src/Shaders.cpp
- F:/uni/IG/Practicas/TrabajoFinal/src/Shaders.h
+ F:/uni/IG/Practicas/PFinal/src/Shaders.cpp
+ F:/uni/IG/Practicas/PFinal/src/Shaders.h
 CMakeFiles/TrabajoFinal.dir/src/Texture.cpp.obj
  ../../libraries2122/freeimage/include/freeImage.h
  ../../libraries2122/glew/include/GL/glew.h
- F:/uni/IG/Practicas/TrabajoFinal/src/Texture.cpp
- F:/uni/IG/Practicas/TrabajoFinal/src/Texture.h
+ F:/uni/IG/Practicas/PFinal/src/Texture.cpp
+ F:/uni/IG/Practicas/PFinal/src/Texture.h
 CMakeFiles/TrabajoFinal.dir/src/main.cpp.obj
  ../../libraries2122/assimp/include/assimp/Compiler/poppack1.h
  ../../libraries2122/assimp/include/assimp/Compiler/pstdint.h
@@ -375,7 +375,7 @@ CMakeFiles/TrabajoFinal.dir/src/main.cpp.obj
  ../../libraries2122/glm/include/glm/vec3.hpp
  ../../libraries2122/glm/include/glm/vec4.hpp
  ../../libraries2122/glm/include/glm/vector_relational.hpp
- F:/uni/IG/Practicas/TrabajoFinal/src/Model.h
- F:/uni/IG/Practicas/TrabajoFinal/src/Shaders.h
- F:/uni/IG/Practicas/TrabajoFinal/src/Texture.h
- F:/uni/IG/Practicas/TrabajoFinal/src/main.cpp
+ F:/uni/IG/Practicas/PFinal/src/Model.h
+ F:/uni/IG/Practicas/PFinal/src/Shaders.h
+ F:/uni/IG/Practicas/PFinal/src/Texture.h
+ F:/uni/IG/Practicas/PFinal/src/main.cpp
