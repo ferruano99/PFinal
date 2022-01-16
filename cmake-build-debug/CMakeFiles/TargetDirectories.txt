@@ -1,0 +1,3 @@
+F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/CMakeFiles/TrabajoFinal.dir
+F:/uni/IG/Practicas/TrabajoFinal/cmake-build-debug/CMakeFiles/rebuild_cache.dir
