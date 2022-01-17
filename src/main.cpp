@@ -240,7 +240,7 @@ void configScene() {
     gold.specular = glm::vec4(0.628281f, 0.555802f, 0.366065f, 1.0f);
     gold.shininess = 51.2f;
     gold.emissive = glm::vec4(0, 0, 0, 1);
-
+    //comit
     emerald.ambient = glm::vec4(0.0215f, 0.1745f, 0.0215f, 0.55f);
     emerald.diffuse = glm::vec4(0.07568f, 0.61424f, 0.07568f, 0.55f);
     emerald.specular = glm::vec4(0.633f, 0.727811f, 0.633f, 0.55f);

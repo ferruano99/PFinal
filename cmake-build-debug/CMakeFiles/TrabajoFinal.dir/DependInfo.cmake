@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "F:/uni/IG/Practicas/PFinal/src/Model.cpp" "F:/uni/IG/Practicas/PFinal/cmake-build-debug/CMakeFiles/TrabajoFinal.dir/src/Model.cpp.obj"
-  "F:/uni/IG/Practicas/PFinal/src/Shaders.cpp" "F:/uni/IG/Practicas/PFinal/cmake-build-debug/CMakeFiles/TrabajoFinal.dir/src/Shaders.cpp.obj"
-  "F:/uni/IG/Practicas/PFinal/src/Texture.cpp" "F:/uni/IG/Practicas/PFinal/cmake-build-debug/CMakeFiles/TrabajoFinal.dir/src/Texture.cpp.obj"
-  "F:/uni/IG/Practicas/PFinal/src/main.cpp" "F:/uni/IG/Practicas/PFinal/cmake-build-debug/CMakeFiles/TrabajoFinal.dir/src/main.cpp.obj"
+  "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/TrabajoFinal/PFinal/src/Model.cpp" "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/TrabajoFinal/PFinal/cmake-build-debug/CMakeFiles/TrabajoFinal.dir/src/Model.cpp.obj"
+  "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/TrabajoFinal/PFinal/src/Shaders.cpp" "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/TrabajoFinal/PFinal/cmake-build-debug/CMakeFiles/TrabajoFinal.dir/src/Shaders.cpp.obj"
+  "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/TrabajoFinal/PFinal/src/Texture.cpp" "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/TrabajoFinal/PFinal/cmake-build-debug/CMakeFiles/TrabajoFinal.dir/src/Texture.cpp.obj"
+  "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/TrabajoFinal/PFinal/src/main.cpp" "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/TrabajoFinal/PFinal/cmake-build-debug/CMakeFiles/TrabajoFinal.dir/src/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -3,14 +3,14 @@
 cmake_policy(SET CMP0009 NEW)
 
 # SRC_FILES at CMakeLists.txt:19 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "F:/uni/IG/Practicas/PFinal/src/*.cpp")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/TrabajoFinal/PFinal/src/*.cpp")
 set(OLD_GLOB
-  "F:/uni/IG/Practicas/PFinal/src/Model.cpp"
-  "F:/uni/IG/Practicas/PFinal/src/Shaders.cpp"
-  "F:/uni/IG/Practicas/PFinal/src/Texture.cpp"
-  "F:/uni/IG/Practicas/PFinal/src/main.cpp"
+  "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/TrabajoFinal/PFinal/src/Model.cpp"
+  "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/TrabajoFinal/PFinal/src/Shaders.cpp"
+  "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/TrabajoFinal/PFinal/src/Texture.cpp"
+  "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/TrabajoFinal/PFinal/src/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "F:/uni/IG/Practicas/PFinal/cmake-build-debug/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/TrabajoFinal/PFinal/cmake-build-debug/CMakeFiles/cmake.verify_globs")
 endif()

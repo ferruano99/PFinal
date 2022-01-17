@@ -53,10 +53,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = F:\uni\IG\Practicas\PFinal
+CMAKE_SOURCE_DIR = C:\Users\ferna\Desktop\Universidad\4\IG\practicas\TrabajoFinal\PFinal
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = F:\uni\IG\Practicas\PFinal\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\ferna\Desktop\Universidad\4\IG\practicas\TrabajoFinal\PFinal\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -80,14 +80,14 @@ clean: CMakeFiles/TrabajoFinal.dir/clean
 CMakeFiles/TrabajoFinal.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabajoFinal.dir\build.make CMakeFiles/TrabajoFinal.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabajoFinal.dir\build.make CMakeFiles/TrabajoFinal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\uni\IG\Practicas\PFinal\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target TrabajoFinal"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\ferna\Desktop\Universidad\4\IG\practicas\TrabajoFinal\PFinal\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target TrabajoFinal"
 .PHONY : CMakeFiles/TrabajoFinal.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TrabajoFinal.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\uni\IG\Practicas\PFinal\cmake-build-debug\CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ferna\Desktop\Universidad\4\IG\practicas\TrabajoFinal\PFinal\cmake-build-debug\CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/TrabajoFinal.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\uni\IG\Practicas\PFinal\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ferna\Desktop\Universidad\4\IG\practicas\TrabajoFinal\PFinal\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/TrabajoFinal.dir/rule
 
 # Convenience name for target.
@@ -106,7 +106,7 @@ CMakeFiles/TrabajoFinal.dir/clean:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P F:\uni\IG\Practicas\PFinal\cmake-build-debug\CMakeFiles\VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P C:\Users\ferna\Desktop\Universidad\4\IG\practicas\TrabajoFinal\PFinal\cmake-build-debug\CMakeFiles\VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

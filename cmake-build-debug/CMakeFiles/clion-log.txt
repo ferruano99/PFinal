@@ -1,16 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" F:\uni\IG\Practicas\PFinal
--- The C compiler identification is GNU 6.3.0
--- The CXX compiler identification is GNU 6.3.0
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: C:/MinGW/bin/gcc.exe - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: C:/MinGW/bin/g++.exe - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
+"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/MinGW/bin/mingw32-make.exe -DCMAKE_C_COMPILER=C:/MinGW/bin/gcc.exe -DCMAKE_CXX_COMPILER=C:/MinGW/bin/g++.exe -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" C:\Users\ferna\Desktop\Universidad\4\IG\practicas\TrabajoFinal\PFinal
 -- Configuring done
 -- Generating done
--- Build files have been written to: F:/uni/IG/Practicas/PFinal/cmake-build-debug
+-- Build files have been written to: C:/Users/ferna/Desktop/Universidad/4/IG/practicas/TrabajoFinal/PFinal/cmake-build-debug
