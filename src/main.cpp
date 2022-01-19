@@ -6,8 +6,6 @@
 #include "Texture.h"
 #include <cmath>
 
-#define PI 3.14159265
-
 void configScene();
 
 void renderScene();
@@ -41,9 +39,13 @@ void drawSuelo(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 
 
 
+//Cubo transparente
+void drawCuboTransparente(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 
 //Sustento noria (patas sustento principal)
-void drawPataNoria(glm::mat4 P, glm::mat4 V, glm::mat4 M);
+void drawPataVertical(glm::mat4 P, glm::mat4 V, glm::mat4 M);
+
+void drawPataTrasversal(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 
 void drawSustento(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 
@@ -89,17 +91,33 @@ Texture img1, img2, img3, img4, img5, img6, img7;
 
 
 // Modelos
-Model plane, cilindro, esfera, cono, torus, triangulo, cabin;
+Model plane, cilindro, esfera, cono, torus, triangulo, cabin, cubo;
 // Viewport
 int w = 500;
 int h = 500;
 
 
 //zoom de la cámara
-float fovy = 50.0;
+float fovy = 80.0;
 //Movimiento de la cámara
-float alphaX = 40.0;
-float alphaY = 25.0;
+float alphaX = 100.0;
+float alphaY = 50.0;
+
+
+//VARIABLES FUNKEY
+//rotación de la cabina en su propio eje
+float RyCabina = 0.0;
+//Número de cabinas en función de qué tecla se presione
+int nCabinas = 10;
+//Subida y bajada de la noria
+float TyNoria = 5;
+//Rotación de noria
+float RzNoria = 0;
+//Parar rotación de la noria
+bool pararNoria = false;
+//enseñar/ocultar cubo
+bool hayCubo = true;
+
 
 int main() {
 
@@ -112,7 +130,7 @@ int main() {
 
     // Creamos la ventana
     GLFWwindow *window;
-    window = glfwCreateWindow(w, h, "Sesion 5", NULL, NULL);
+    window = glfwCreateWindow(w, h, "Práctica final", NULL, NULL);
     if (!window) {
         glfwTerminate();
         return -1;
@@ -169,11 +187,10 @@ void configScene() {
     plane.initModel("resources/models/plane.obj");
     cilindro.initModel("resources/models/cylinder.obj");
     esfera.initModel("resources/models/sphere.obj");
-    cono.initModel("resources/models/cone.obj");
     torus.initModel("resources/models/thin_torus.obj");
     triangulo.initModel("resources/models/triangle.obj");
     cabin.initModel("resources/models/cabinaMod.obj");
-
+    cubo.initModel("resources/models/cube.obj");
 
     // Texturas (imágenes) QUITABLE
     img1.initTexture("resources/textures/img1.png");
@@ -240,7 +257,7 @@ void configScene() {
     gold.specular = glm::vec4(0.628281f, 0.555802f, 0.366065f, 1.0f);
     gold.shininess = 51.2f;
     gold.emissive = glm::vec4(0, 0, 0, 1);
-    //comit
+
     emerald.ambient = glm::vec4(0.0215f, 0.1745f, 0.0215f, 0.55f);
     emerald.diffuse = glm::vec4(0.07568f, 0.61424f, 0.07568f, 0.55f);
     emerald.specular = glm::vec4(0.633f, 0.727811f, 0.633f, 0.55f);
@@ -319,12 +336,12 @@ void renderScene() {
     glm::mat4 P = glm::perspective(glm::radians(fovy), aspect, nplane, fplane);
 
     // Matriz V
-    float x = 10.0f * glm::cos(glm::radians(alphaY)) * glm::sin(glm::radians(alphaX));
-    float y = 10.0f * glm::sin(glm::radians(alphaY));
-    float z = 10.0f * glm::cos(glm::radians(alphaY)) * glm::cos(glm::radians(alphaX));
+    float x = 20.0f * glm::cos(glm::radians(alphaY)) * glm::sin(glm::radians(alphaX));
+    float y = 20.0f * glm::sin(glm::radians(alphaY));
+    float z = 20.0f * glm::cos(glm::radians(alphaY)) * glm::cos(glm::radians(alphaX));
 
     glm::vec3 eye(x, y, z);
-    glm::vec3 center(0, 0, 0.0);
+    glm::vec3 center(0, 6, 0.0);
     glm::vec3 up(0, 1, 0);
     glm::mat4 V = glm::lookAt(eye, center, up);
 
@@ -334,7 +351,11 @@ void renderScene() {
     // Dibujamos la escena
     drawSuelo(P, V, I);
     drawNoria(P, V, I);
+    if (hayCubo) { //si esta línea de código se sitúa antes del drawNoria, habría que actualizar glDepthMask para respetar las transparaencias
+        drawCuboTransparente(P, V, I);
+    }
 }
+
 
 void drawObjectMat(Model model, Material material, glm::mat4 P, glm::mat4 V, glm::mat4 M) { //OBLIGATORIO
 
@@ -361,6 +382,12 @@ void drawObjectTex(Model model, Textures textures, glm::mat4 P, glm::mat4 V, glm
 
 }
 
+void drawCuboTransparente(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
+    glm::mat4 S = glm::scale(I, glm::vec3(5, 5, 5));
+    glm::mat4 T = glm::translate(I, glm::vec3(0, 5, 0));
+    drawObjectMat(cubo, rubytrans, P, V, M * T * S);
+}
+
 void drawSuelo(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
 
 
@@ -383,7 +410,103 @@ void funFramebufferSize(GLFWwindow *window, int width, int height) {
 
 
 void funKey(GLFWwindow *window, int key, int scancode, int action, int mods) {
+    switch (key) {
+        case GLFW_KEY_C: //Rotación de la cabina en su propio eje
+            if (mods == GLFW_MOD_SHIFT) {
+                RyCabina += 5;
+            } else {
+                RyCabina -= 5;
+            }
+            break;
+            //Del F1 al F12, el número de cabinas cambia
+        case GLFW_KEY_F1:
+            if (action == GLFW_PRESS) {
+                nCabinas = 1;
+            }
+            break;
+        case GLFW_KEY_F2:
+            if (action == GLFW_PRESS) {
+                nCabinas = 2;
+            }
+            break;
+        case GLFW_KEY_F3:
+            if (action == GLFW_PRESS) {
+                nCabinas = 3;
+            }
+            break;
+        case GLFW_KEY_F4:
+            if (action == GLFW_PRESS) {
+                nCabinas = 5;
+            }
+            break;
+        case GLFW_KEY_F5:
+            if (action == GLFW_PRESS) {
+                nCabinas = 5;
+            }
+            break;
+        case GLFW_KEY_F6:
+            if (action == GLFW_PRESS) {
+                nCabinas = 6;
+            }
+            break;
+        case GLFW_KEY_F7:
+            if (action == GLFW_PRESS) {
+                nCabinas = 7;
+            }
+            break;
+        case GLFW_KEY_F8:
+            if (action == GLFW_PRESS) {
+                nCabinas = 8;
+            }
+            break;
+        case GLFW_KEY_F9:
+            if (action == GLFW_PRESS) {
+                nCabinas = 9;
+            }
+            break;
+        case GLFW_KEY_F10:
+            if (action == GLFW_PRESS) {
+                nCabinas = 10;
+            }
+            break;
+        case GLFW_KEY_F11:
+            if (action == GLFW_PRESS) {
+                nCabinas = 11;
+            }
+            break;
+        case GLFW_KEY_F12:
+            if (action == GLFW_PRESS) {
+                nCabinas = 12;
+            }
+            break;
+        case GLFW_KEY_UP: //Movimiento vertical de la noria hacia arriba
+            if (TyNoria < 8)
+                TyNoria += 0.1;
+            break;
+        case GLFW_KEY_DOWN://Movimiento vertical de la noria hacia abajo
+            if (TyNoria > 3.5) {
+                TyNoria -= 0.1;
+            }
+            break;
+        case GLFW_KEY_P: //Botón para parar la rotación de la noria
+            if (action == GLFW_PRESS) {
+                if (pararNoria) {
+                    pararNoria = false;
+                } else {
+                    pararNoria = true;
+                }
+            }
+            break;
+        case GLFW_KEY_O: //Enseña/Oculta cubo
+            if (action == GLFW_PRESS){
+                if (hayCubo){
+                    hayCubo = false;
+                } else{
+                    hayCubo = true;
+                }
+            }
 
+    }
 }
 
 void funScroll(GLFWwindow *window, double xoffset, double yoffset) {
@@ -424,12 +547,17 @@ void drawPataNoria(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
     drawObjectMat(cilindro, cyan, P, V, M * Rx * T * S);
 }
 
-void drawSustento(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
+void drawPataTrasversal(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
+    glm::mat4 S = glm::scale(I, glm::vec3(0.1, 3, 0.1));
+    glm::mat4 R = glm::rotate(I, glm::radians(90.0f), glm::vec3(1, 0, 0));
+    drawObjectMat(cilindro, cyan, P, V, M * R * S);
+}
 
-    //Rotación de -50º para hacer la pata simétrica (en la original se rota 25º)
-    glm::mat4 R = glm::rotate(I, glm::radians(-50.0f), glm::vec3(1, 0, 0));
-    drawPataNoria(P, V, M * R);
-    drawPataNoria(P, V, M);
+void drawSustento(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
+    glm::mat4 TxDer = glm::translate(I, glm::vec3(0, 5, 3));
+    glm::mat4 TxIzq = glm::translate(I, glm::vec3(0, 5, -3));
+    drawPataVertical(P, V, M * TxDer);
+    drawPataVertical(P, V, M * TxIzq);
 }
 
 void drawTriangulo(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
@@ -448,8 +576,13 @@ void drawInterior(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
 
 void drawCabina(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
     glm::mat4 S = glm::scale(I, glm::vec3(0.2, 0.2, 0.2));
-    glm::mat4 R = glm::rotate(I, glm::radians(90.0f), glm::vec3(1, 0, 0));
-    drawObjectMat(cabin, pbronze, P, V, M * R * S);
+    glm::mat4 Rx = glm::rotate(I, glm::radians(90.0f), glm::vec3(1, 0, 0));
+
+    //para la funkey a la hora de rotar la cabina
+    glm::mat4 Ry = glm::rotate(I, glm::radians(RyCabina), glm::vec3(0, 1, 0));
+
+
+    drawObjectMat(cabin, pbronze, P, V, M * Ry * Rx * S);
 
 }
 
@@ -469,9 +602,21 @@ void juntarPartesToroide(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
 }
 
 void drawNoria(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
-    //Calculamos con pitágoras la longitud en el eje y de la pata para ponerla encima del plano
-    float longpata = 6.0f * cos(25.0f * PI / 180.0f);
-    glm::mat4 T = glm::translate(I, glm::vec3(0, longpata, 0));
-    drawSustento(P, V, M * T);
-    juntarPartesToroide(P, V, M * T);
+    glm::mat4 T = glm::translate(I, glm::vec3(0, TyNoria, 0));
+    int timer = glfwGetTime() * 1000; //ms. Sirve para rotar la noria
+    if (timer % 2 == 0 && !pararNoria) {
+        //Cada 2 ms rotamos la noria 4º
+        RzNoria += 4;
+    }
+    glm::mat4 Rz = glm::rotate(I, glm::radians(RzNoria), glm::vec3(0, 0, 1));
+
+
+    //Sustento principal
+    drawSustento(P, V, M);
+
+    //Pata trasversal que atraviesa la noria y se mueve en función de funkeys
+    drawPataTrasversal(P, V, M * T);
+
+    //Noria
+    juntarPartesToroide(P, V, M * T * Rz);
 }
