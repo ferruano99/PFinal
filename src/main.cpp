@@ -540,11 +540,9 @@ void drawToroideNoria(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
     drawObjectMat(torus, rubyo, P, V, M * Rx * S);
 }
 
-void drawPataNoria(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
-    glm::mat4 S = glm::scale(I, glm::vec3(0.1, 3, 0.1));
-    glm::mat4 T = glm::translate(I, glm::vec3(0, -3, 0));
-    glm::mat4 Rx = glm::rotate(I, glm::radians(25.0f), glm::vec3(1, 0, 0));
-    drawObjectMat(cilindro, cyan, P, V, M * Rx * T * S);
+void drawPataVertical(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
+    glm::mat4 S = glm::scale(I, glm::vec3(0.1, 5, 0.1));
+    drawObjectMat(cilindro, cyan, P, V, M * S);
 }
 
 void drawPataTrasversal(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
@@ -589,8 +587,8 @@ void drawCabina(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
 void drawCabinasEnToroide(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
     glm::mat4 T = glm::translate(I, glm::vec3(0, 3 + 0.2, 0));
 
-    for (int i = 0; i < 15; ++i) {
-        glm::mat4 R = glm::rotate(I, glm::radians(i * 360.0f / 15), glm::vec3(0, 0, 1));
+    for (int i = 0; i < nCabinas; ++i) {
+        glm::mat4 R = glm::rotate(I, glm::radians(i * 360.0f / nCabinas), glm::vec3(0, 0, 1));
         drawCabina(P, V, M * R * T);
     }
 }
